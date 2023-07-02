@@ -1,0 +1,135 @@
+# Tipe data set
+
+"""
+Tipe data set merupakan salah satu dari tipe data sequence atau
+tipe data kolektif. Tipe data set digunakan untuk menyimpan beberapa
+nilai dengan tipe data berbeda pada satu variable
+Aturan-aturan pembuatan tipe data set:
+1. Nilai anggota yang disimpan harus unik (tidak ada duplikasi)
+2. Nilai anggota yang sudah dimasukan tidak dapat diubah lagi
+3. Set bersifat unordered atau tidak dapat diakses melalui indeks
+"""
+
+# Cara membuat tipe data set
+
+# 1. Dengan menggunakan kurung kurawal
+dataPemilikRumah = {"Irsam Nurhamni", "A7", "083817297791"}
+
+# 2. Dengan mengkonversi list ke data set
+dataSiswa = set(["Yara Kaureen", "0 Besar", 19122021])
+
+# 3. Set dengan tipe data yang berbeda
+dataCampuran = {"Azmia", 1997, 0.75, (True, "Benar")}
+
+print (dataPemilikRumah, "Tipe data:", type(dataPemilikRumah))
+print (dataSiswa, "Tipe data:", type(dataSiswa))
+print (dataCampuran, "Tipe data:", type(dataCampuran))
+
+
+"""
+Kita tidak bisa memasukan tipe data list kedalam tipe data set,
+karena tipe data list sifatnya mutable atau bisa dirubah
+"""
+"""tipeDataSet = {"Yara", 1.5, ["Rumah", True]}
+print (tipeDataSet)"""
+"""
+Jika dirun maka akan muncul pesar error seperti ini:
+    tipeDataSet = {"Yara", 1.5, ["Rumah, True]}
+typeError: unhashable type: 'list'
+"""
+
+# Tipe data set tidak dapat menerima nilai duplikat
+
+kalimat1 = {"pagi", "ini", "sangat", "cerah", "seperti", "pagi", "kemarin"}
+
+print (kalimat1)
+
+"""
+kata pagi dalam tipe data set diatas menjadi hilang
+karena kata pagi diatas diduplikasi, maka tidak akan ditampilkan
+"""
+
+# Tipe data set meskipun tidak bisa dirubah tetapi dapat ditambah nilainya
+
+himpunanAbjad = set(["a", "b", "c"])
+
+## Menambah satu nilai
+himpunanAbjad.add("d")
+himpunanAbjad.add("e")
+
+## Menambah lebih dari satu nilai
+himpunanAbjad.update({"g", "h"})
+
+## Bisa juga menambahkan list untuk menambah data pada set
+himpunanAbjad.update(["i", "j"])
+
+print (himpunanAbjad)
+
+# Menghapus data pada set
+
+"""
+Ada 4 cara menghapus nilai pada tipe data set, diantaranya:
+1. remove(nilai) Untuk menghapus nilai sesuai dengan nilai yang kita
+masukan pada parameternya. Jika nilai yang dimasukan tidak ada maka
+akan ada pesan error
+2. discard(nilai) Untuk menghapus nilai sesua dengan nilai yang kita
+masukan pada parameternya. Jika nilai tidak ada maka tidak akan pesan
+error
+3. pop() Mengambil dan menghapus nilai di sebelah kiri
+4. clear() Menghapus semua nilai yang ada pada tipe data set
+"""
+
+nilaiHimpunan = {"Rumah", 1997, 0.77, (True, False), "Creep"}
+print (nilaiHimpunan)
+
+## Menghapus dengan fungsi remove()
+nilaiHimpunan.remove("Rumah")
+print (nilaiHimpunan)
+
+## Mengahapus dengan fungsi discard()
+nilaiHimpunan.discard("Adik")
+print (nilaiHimpunan)
+
+## Menghapus dengan pungsi pop()
+nilaiYangDihapus = nilaiHimpunan.pop()
+print ("Nilai yang dihapus:", nilaiYangDihapus)
+
+## Menghapus dengan fungsi clear()
+nilaiHimpunan.clear()
+print(nilaiHimpunan)
+
+# Fungsi keanggotaan pada tipe data set
+"""Di antara keunggulan tipe data set adalah: keunikan anggotanya.
+Sehingga, dengan keunikan tersebut, python menyediakan kepada kita
+berbagai fungsi keanggotaan yang berguna untuk pengolahan data.
+Di antaranya:
+1. Fungsi gabungan (union)
+2. Fungsi irisan (intersection)
+3. Fungsi selisih (difference)
+4. Funsi komplemen (symmetric differnce)
+4. Dsb
+"""
+
+siswaSMP = {"Andi", "Agus", "Ahmad", "Dani"}
+siswaSMA = {"Arif", "Agus", "Dani", "Deni"}
+
+## Funsi Gabungan
+"Menggabungkan dua buah tipe data set"
+
+### Cara pertama
+print (siswaSMP | siswaSMA)
+
+### Cara kedua
+print (siswaSMP.union(siswaSMA))
+
+## Fungsi irisan
+"""Berfungsi untuk menampilkan nilai yang sama pada dua atau lebih
+tipe data set"""
+
+### Cara pertama
+print (siswaSMA & siswaSMP)
+
+### Cara kedua
+print (siswaSMP.intersection(siswaSMA))
+
+## Fungsi

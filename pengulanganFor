@@ -1,0 +1,173 @@
+# Pengulangan For
+
+listAbjad = [
+    "a", "b", "c", "d", "e",
+    "f", "g", "h", "i", "j",
+    "k", "l", "m", "n", "o",
+    "p", "q", "r", "s", "t",
+    "u", "v", "w", "x", "y",
+    "z"
+]
+
+##for abjad in listAbjad:
+    ##print (abjad)
+
+"""
+perulangan untuk (for) pada (in) listAbjad
+maka cetak satu satu sesuai dengan index pada listAbjad
+"""
+
+# Mengetahui urutan iterasi for dengan list
+
+for i, abjad in enumerate (listAbjad):
+    print (i, abjad)
+
+for abjad in enumerate (listAbjad):
+    print (abjad)
+
+"""
+Fungsi enumarate adalah untuk mengetahui urutan list sesuai
+dengan letak index pada nilai list 
+"""
+
+# for dengan fungsi range
+
+for i in range (5):
+    print ("Ini pengulangan ke -", i)
+
+"""
+maksudnya pengulangan ini adalah dia akan mengulang perintah print
+sebanyak 5 kali sesuai dengan index i
+"""
+
+print (" ")
+
+for i in range (1, 8):
+    print ("Ini pengulangan ke -", i)
+
+"""
+dan yang ini adalah pengulangan yang ditentukan rentang nilainya
+dimulai dari 1 sampai 7
+"""
+
+print ("")
+
+# Cara menghitung bilangan kelipatan genap
+
+print ("Bilangan Genap")
+for i in range (2, 12, 2):
+    print ("Bilangan genap =", i)
+
+print ("")
+
+# Cara membuat bilangan kelipatan ganjil
+print ("Bilangan Ganjil")
+for i in range (1, 15, 2):
+    print ("Bilangan ganjil =", i)
+
+"""
+maksudnya adalah perulangan akan dimulai dari angka pertama sampai dengan
+angka terkahir, dan pada setiap pengulangan nilai pertama akan ditambah 2
+kemudian hasil angka tersebut akan ditambah 2 dan seterusnya sampai
+dengan angka terkahir yang didefinisikan
+"""
+
+print ("")
+
+# for dengan tuple
+
+tupleJK = "Laki - laki", "Perempuan"
+
+for jK in tupleJK:
+    print (jK)
+
+"""
+tuple juga dapat diekstrak dan diprint berulangan sesuai dengan
+nilai dari tuple tsb
+"""
+
+print ("")
+
+# for dengan string
+
+for ulang in "Indonesia":
+    print (ulang)
+
+"""
+string juga dapat dilakukan pengulangan karena tipe data string
+bersifat iterable atau tersusun dari awal sampai akhir (dari i-a)
+"""  
+
+print ("")
+
+# Break dan continue
+
+"""
+Break adalah untuk menghentikan paksa suatu perulangan, dan
+Continue adalah untuk melewati atau men-skip suatu perulangan
+"""
+
+for i in range (10, 20):
+    if i == 15:
+        continue
+    print (i)
+"""
+Angka 15 tidak akan di print karena ada perintah continue,
+maksudnya perulangan akan di skip ketika memasuki angka 15 dan
+akan dilanjutkan kembali pada angka 16
+"""
+
+print (" ")
+
+for i in range (10, 20):
+    if i == 15:
+        break
+    print (i)
+"""
+Pada perulangan ini angka 15 tidak di print dan perulangan tidak
+dilanjutkan karena perintah break akan memaksa menghentikan perulangan
+"""
+
+print (" ")
+
+# For else
+
+"""
+Perintah for else hanya akan dieksekusi ketika perulangan selesai secara
+natural tanpa interupsi. Tidak ada bedanya dengan kita memasukan string
+pada else di print dengan memasukan nya langsung pada variable
+listKota
+"""
+
+listKota = "Jakarta", "Bandung", "Yogyakarta", "Semarang", "Surabaya"
+
+for kota in listKota:
+    print (kota)
+else:
+    print ("Tidak ada lagi nama kota")
+
+print (" ")
+
+# for else break
+
+"""
+Jika perintah for else dengan break di gunakanan, maka perintah for else
+akan dieksekusi apabila perintah break tidak di eksekusi
+
+ini contohnya:
+"""
+
+listNama = ["Yara", "Azmia", "Irsam"]
+cariNama = input("Masukan nama yang dicari : ")
+
+for i, nama in enumerate(listNama):
+    ## perintah lower adalah untuk menjadikan variable case insensitive
+    ## maksudnya ketika user memasukan inputan dalam huruf kecil semua
+    ## maka variable akan tetap membacanya nya meskipun pada variable
+    ## nilainya berupa huruf besar dan huruf kecil
+    if nama.lower() == cariNama.lower():
+        print("Nama yang anda cari berada pada index :", i)
+        break
+else:
+    print ("Maaf nama yang anda cari tidak ada")
+

@@ -1,0 +1,57 @@
+# Perulangan bersarang
+
+# Perulangan for bersarang
+
+for i in range(3):
+    print ("Ini perulangan dalam [i]", i)
+    for j in range (5):
+        print ("Ini perulangan luar [i, j]", str (i) + "," + str (j))
+
+print ("")
+
+for baris in range (5):
+    for kolom in range (7):
+        print ("o", end = " ")
+    else:
+        print ("")
+
+print ("")
+
+# Perulangan while bersarang
+
+listKota = ["Bandung", "Cianjur", "CImahi"]
+listTempat1 = ["Taman", "Pedestrian", "Masjid"]
+
+for kota in listKota:
+    print (kota)
+
+    listTempat = ["Taman", "Pedestrian", "Masjid"]
+
+    while listTempat:
+        print ("-->", listTempat.pop(0))
+
+print ("atau bisa dengan for")
+
+for kota in listKota:
+    print (kota)
+    for tempat in listTempat1:
+        print ("-->", tempat)
+
+print ("")
+
+# Contoh lain perulagan bersarang dengan while
+
+maxBaris = 7
+maxKolom = 7
+
+baris = 0
+while baris < maxBaris:
+    kolom = 0
+    while kolom < maxKolom:
+        print ('o' if kolom <= baris else '+', end = ' ')
+        kolom += 1
+    else:
+        print ('')
+    baris += 1
+
+

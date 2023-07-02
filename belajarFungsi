@@ -1,0 +1,88 @@
+# Belajar fungsi
+def enter():
+    print ("")
+
+def haloWorld():
+    print ("Halo Yara!")
+
+# Fungsi dengan parameter
+def nama(nama):
+    print (f'Selamat datang {nama}')
+
+# Fungsi dengan parameter wajib diisi
+"""
+Apabila salah satu parameter tidak diisi maka program akan error
+"""
+def domisili(nama, noHP):
+    print (f"Nama saya {nama} no {noHP}")
+
+# Fungsi dengan paramater default
+def suhu(alamat, derajat, satuan = "celcius"):
+    print (f"Suhu di {alamat} adalah {derajat} derajat {satuan}")
+
+# Fungsi dengan lebih dari satu parameter default
+def suhu2(alamat, derajat = 70, satuan = "celcius"):
+    print (f"Suhu di {alamat} adalah {derajat} derajat {satuan}")
+
+# Fungsi yang mengembalikan nilai
+"""
+1. Kata kunci return berfungsi untuk mengembalikan nilai
+2. Nilai yang dikembalikan oleh fungsi bisa kita gunakan kembali
+sesuai dengan kebutuhan
+"""
+def luasPersegi(sisi):
+    return sisi * sisi
+
+# Fungsi dengan lebih dari satu return
+def persentase(total, jumlah):
+    if (total >= 0 and total <= jumlah):
+        return total / jumlah * 100
+    return False
+
+
+haloWorld()
+enter()
+
+nama("Irsam")
+nama("Azmia")
+nama("Yara")
+enter()
+
+domisili("Yara", 1234)
+enter()
+
+suhu("Cianjur", 20)
+suhu("Dangdeur", 70, "kelvin")
+enter()
+
+suhu2("Gunteng")
+suhu2("Joglo", satuan = "kelvin")
+"""
+Jika ingin mengisi salah satu parameter, maka harus didefinisikan parameter
+mana yang harus di isi. Kita juga dapat mengisi parameter secara acak 
+tidak sesuai dengan urutan dari definisi parameter fungsi asalkan parameter
+fungsi nya didefinisikan sesuai dengan di fungsi atau bisa disebut juga
+fungsi dengan parameter tidak berurut
+"""
+suhu2(derajat = 99, satuan = "reamur", alamat = "Dangdeur")
+enter()
+
+print ("Luas lingkran dengan sisi 10 =", luasPersegi(10))
+
+"""
+Fungsi disimpan pada variable
+"""
+persegiKecil = luasPersegi(10)
+persegiBesar = luasPersegi(100)
+print("Persegi kecil", persegiKecil, "+", "Persegi besar", persegiBesar,
+      "=", persegiKecil + persegiBesar)
+enter()
+
+# Output 50
+print (persentase(30, 60))
+# Output False
+print (persentase(60, 30))
+enter()
+
+
+

@@ -1,0 +1,52 @@
+# Pengulangan while
+
+"""
+Perulangan while adalah perulangan ketika sebuah kondisi memenuhi syarat
+maka syntax akan terus menerus diulang, atau selama sebuah kondisi terpenuhi
+maka akan terus dieksekusi. Singkatnya perulangan while adalah
+perulangan yang bisa disebut perulangan tanpa batas, tidak terbatasi, atau
+indefinite
+"""
+
+i = 0
+
+while i <= 100:
+    print (i)
+    i += 5
+
+"""
+1. Melakukan pengulangan selama nilai i kurang atau sama dengan 100
+2. Setiap iterasi atau pengulangan sistem akan menampilkan nilai dari i
+3. Dan terakhir pada setiap iterasi, sistem akan menambahkan nilai i
+dengan angka 5
+"""
+
+print ("")
+
+# Perulangan while untuk list
+
+listNama = ["Yara", "Azmia", "Irsam"]
+i = 0
+
+while i < len (listNama):
+    print (listNama [i])
+    i += 1
+
+while listNama:
+    print (listNama.pop(0))
+
+print ("")
+
+# Perulangan while dengan inputan
+
+"""
+kita akan meminta user untuk memasukan nilai ganjil lebih dari 50
+apabila user memasukan nilai kurang dari 50, atau bilangan genap
+maka sistem akan diminta untuk memasukan nilainya lagi
+"""
+
+a = int (input ("Masukan nilai lebih dari 50 : "))
+
+while a % 2 != 1 or a <= 50:
+    a = int (input ("Salah!, masukan kembali nilai : "))
+print ("Benar")
